@@ -4695,9 +4695,7 @@ textarea.form-control {
 .ps-block--categories-box .ps-block__item:hover {
   border-color: silver;
 }
-.front {
-  text-align: center;
-}
+
 
 
 .ps-block--categories-box .ps-block__item:hover p {
@@ -17152,10 +17150,17 @@ html .bg--parallax {
   background-position: 50% 50% !important;
   background-size: cover !important;
 }
+.rodov {
+  height: 360px !important;
+}
+
+
 
 .buses {
   background: url(assets/img/buses.png);
   background-size: cover !important;
+  height: 425px !important;
+  width: 100% !important;
 }
 
 .bg--top {
