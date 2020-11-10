@@ -10,6 +10,11 @@
     color: gray;
     font-size: 25px;
   }
+  .city {
+    align-content: center;
+    color: gray;
+    margin-top: 3px !important;
+  }
 
   .search-box{
     background-color: aqua !important;
