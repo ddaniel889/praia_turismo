@@ -333,9 +333,14 @@
         </div-->
     </div>
     <div class="ps-newsletter rodov"> 
-        <div class="coverClass">        
-        <div class="rodoWidget" id="rodoviariaonline-widget" data-c="AGENCIAdf7d493580fae7a" data-l="home" data-t="n"></div>
-    </div> 
+        <!--div class="coverClass"-->        
+        <div  #rodovia class="rodoWidget" id="rodoviariaonline-widget" data-c="AGENCIAdf7d493580fae7a" data-l="home" data-t="n"></div>
+        <div  #target class="parent">
+            <div class="child">
+            </div>
+        </div>
+    
+        <!--/div--> 
     </div>
     <div class="ps-site-features rodov1">
         <div class="ps-container">
@@ -418,59 +423,36 @@
     <div class="ps-newsletter">
         <h4 class="front text-center">Principais passagens de ônibus</h4>
         <hr>
-           <div class="container">
-         
+   <div class="container"> 
         <div class="row"> 
             <div class="col-md-6"> 
-            <div class="card">
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas">  <h4 class="text-center city">Río de Janeiro</h4></a> 
-                    <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas">  <img class="card-img-top" src="assets/img/rio_de_janeriob.jpg" alt="Card image cap"></a> 
-            </div>
+                <app-image-city title="Río de Janeiro" image="assets/img/rio_de_janeriob.jpg"></app-image-city>  
            </div>      
            <div class="col-md-6"> 
-            <div class="card">
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas">   <h4 class="text-center city">Sao Paulo</h4></a> 
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas">  <img class="card-img-top" src="assets/img/sao_paulob.jpg" alt="Card image cap"></a> 
-            </div>
+            <app-image-city title="Río de Janeiro" image="assets/img/sao_paulob.jpg"></app-image-city>
            </div>  
         </div> 
 
         <div class="row"> 
             <div class="col-md-3"> 
-            <div class="card">
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas">  <h4 class="text-center city">Sao Paulo</h4></a> 
-                    <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas">  <img class="card-img-top" src="assets/img/sao_paulo.jpg" alt="Card image cap"></a> 
-            </div>
+                <app-image-city title="Río de Janeiro" image="assets/img/sao_paulo.jpg"></app-image-city>
            </div>      
            <div class="col-md-3"> 
-            <div class="card">
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas"> <h4 class="text-center city">Curitiba</h4></a> 
-                    <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas"><img class="card-img-top" src="assets/img/curitiba.jpg" alt="Card image cap"></a> 
-            </div>
+            <app-image-city title="Río de Janeiro" image="assets/img/curitiba.jpg"></app-image-city>  
            </div>  
            <div class="col-md-3"> 
-            <div class="card">
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas"> <h4 class="text-center city">Río de Janeiro</h4></a>
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas"><img class="card-img-top" src="assets/img/rio_de_janeiro.jpg" alt="Card image cap"></a>
-            </div>
+            <app-image-city title="Río de Janeiro" image="assets/img/rio_de_janeiro.jpg"></app-image-city>  
            </div>      
            <div class="col-md-3"> 
-            <div class="card">
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas"><h4 class="text-center city">Belo Horizonte</h4></a>  
-                <a href="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas"> <img class="card-img-top" src="assets/img/Belo_horizonte.jpg" alt="Card image cap"></a> 
-            </div>
+            <app-image-city title="Río de Janeiro" image="assets/img/Belo_horizonte.jpg"></app-image-city> 
            </div> 
-
-
-
-
         </div> 
-
-
-
-          </div>
     </div>
-    <div class="ps-newsletter">
+
+    
+    </div>
+
+    <!--div class="ps-newsletter">
         <div class="ps-container">
 
             <p class="text-center"> <img src="assets/img/descuento.png" alt="">  </p>
@@ -490,10 +472,13 @@
         <div class="ps-container">
             <p class="text-center"> <img src="assets/img/descarga.png" alt="">  </p>
         </div>
-    </div>
+    </div-->
 <!--/div--> <!--fin de home page1  -->
-<div class="ps-product-list ps-clothings">
-    <div class="ps-container">
+
+
+
+<!--div class="ps-product-list ps-clothings">
+    <div class="ps-container"-->
         <!--div class="ps-section__header">
             <h3><strong>Tus Búsquedas Recientes</strong></h3>  
             <ul class="ps-section__links">
@@ -502,29 +487,29 @@
         </div-->
 
         <!--p>  <h4 class="text-left"><strong>Tus Búsquedas Recientes</strong></h4>  <a href="shop-grid.html" class="textR">Ver Todo</a>    </p-->
-        <div class="ps-section__content">
+        <!--div class="ps-section__content">
             <div class="ps-carousel--nav owl-slider" data-owl-auto="false" data-owl-loop="false" data-owl-speed="10000" data-owl-gap="0" data-owl-nav="true" data-owl-dots="true" data-owl-item="7" data-owl-item-xs="2" data-owl-item-sm="2" data-owl-item-md="3" data-owl-item-lg="4" data-owl-item-xl="6" data-owl-duration="1000" data-owl-mousedrag="on">
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/a.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/a.png" alt=""--><!--/a-->
                        
-                    </div>
-                    <div class="ps-product__container">
-                        <div class="ps-product__content"><!--a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a-->
-                            <div class="ps-product__rating">
+                    <!--/div-->
+                    <!--div class="ps-product__container">
+                        <div class="ps-product__content"--><!--a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a-->
+                            <!--div class="ps-product__rating">
                              
-                            </div>
+                            </div-->
   
-                        </div>
-                        <div class="ps-product__content hover"><!--a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a-->
+                        <!--/div>
+                        <div class="ps-product__content hover"--><!--a class="ps-product__title" href="product-default.html">Marshall Kilburn Portable Wireless</a-->
                             <!--p class="ps-product__price sale">$567.99 <del>$670.00 </del></p-->
-                        </div>
+                        <!--/div>
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/b.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/b.png" alt=""--><!--/a-->
                    
                       
-                    </div>
+                    <!--/div>
                     <div class="ps-product__container">
                         <div class="ps-product__content">
                             <div class="ps-product__rating">
@@ -538,10 +523,10 @@
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/c.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/c.png" alt=""--><!--/a-->
                       
                   
-                    </div>
+                    <!--/div>
                     <div class="ps-product__container">
                         <div class="ps-product__content">
                             <div class="ps-product__rating">
@@ -555,9 +540,9 @@
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/d.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/d.png" alt=""--><!--/a-->
                        
-                    </div>
+                    <!--/div>
                     <div class="ps-product__container">
                         <div class="ps-product__content">
                             <div class="ps-product__rating">
@@ -571,9 +556,9 @@
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/e.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/e.png" alt=""--><!--/a-->
                        
-                    </div>
+                    <!--/div>
                     <div class="ps-product__container">
                         <div class="ps-product__content">
                             <div class="ps-product__rating">
@@ -587,9 +572,9 @@
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/f.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/f.png" alt=""--><!--/a-->
                    
-                    </div>
+                    <!--/div>
                     <div class="ps-product__container">
                         <div class="ps-product__content">
                             <div class="ps-product__rating">
@@ -601,77 +586,28 @@
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/g.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/g.png" alt=""--><!--/a-->
                       
-                    </div>
+                    <!--/div>
                     <div class="ps-product__container">
-                        <div class="ps-product__content"><!--a class="ps-product__title" href="product-default.html">EPSION Plaster Printer</a-->
+                        <div class="ps-product__content"--><!--a class="ps-product__title" href="product-default.html">EPSION Plaster Printer</a-->
                           
                            
-                        </div>
+                        <!--/div>
                         <div class="ps-product__content hover">
                           
                         </div>
                     </div>
                 </div>
                 <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/h.png" alt=""><!--/a-->
+                    <div class="ps-product__thumbnail"--><!--a href="product-default.html"--><!--img src="assets/img/products/electronic/h.png" alt=""--><!--/a-->
                         
-                    </div>
-                    <div class="ps-product__container">
-                        <div class="ps-product__content">
-                           
-                         
-                        </div>
-                        <div class="ps-product__content hover">
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/i.png" alt=""><!--/a-->
-                        
-                    </div>
-                    <div class="ps-product__container">
-                        <div class="ps-product__content">
-                           
-                        </div>
-                        <div class="ps-product__content hover">
-                       
-                        </div>
-                    </div>
-                </div>
-                <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/j.png" alt=""><!--/a-->
-                        
-                    </div>
-                    <div class="ps-product__container">
-                        <div class="ps-product__content">
-                            
-                        </div>
-                        <div class="ps-product__content hover">
-                         
-                        </div>
-                    </div>
-                </div>
-                <div class="ps-product">
-                    <div class="ps-product__thumbnail"><!--a href="product-default.html"--><img src="assets/img/products/electronic/k.png" alt=""><!--/a-->
-                       
-                    </div>
-                    <div class="ps-product__container">
-                        <div class="ps-product__content">
-                            
-                        </div>
-                        <div class="ps-product__content hover">
-                          
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
+       
+  <!--iframe src="https://rodoviariaonline.com.br/passagem-onibus/mais-vendidas" width="100%" height="800px" style="border:1px solid black;">
+                        </iframe-->
 <hr>
 
 <hr>
 <app-footer></app-footer>
+<hr>
+<!--app-busiframe></app-busiframe-->

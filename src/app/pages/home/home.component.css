@@ -1,34 +1,26 @@
-.rodoWidget{
-    background-color: transparent !important;
-   
-    margin-left: 20px !important;
-  }
+/*div#rodoviaraonline-widget div.search-box{
 
-  .front {
-    align-content: center;
-    /*margin-left: 25px;*/
-    color: gray;
-    font-size: 25px;
-  }
-  .city {
-    align-content: center;
-    color: gray;
-    margin-top: 3px !important;
-  }
-
-  .search-box{
-    background-color: aqua !important;
-  }
-
-  .rodov{
-    background-color: #F3B791 !important;
-  }
-  .coverClass{
-    margin-bottom: 10px !important;
-  }
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: rgb(224 115 11 / 80%) !important;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    opacity: 0.8;
+  
+}*/
 
 
-  .rodov1{
-    background-color: white !important;
-    margin-top: 20px !important;
-  }
+.bg{
+
+ /* -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;*/
+  background-color: rgb(224 115 11 / 80%) !important;
+  /*width: 100%;
+  height: auto;
+  overflow: auto;
+  opacity: 0.8 !important;*/
+
+}

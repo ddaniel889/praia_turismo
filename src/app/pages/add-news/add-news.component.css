@@ -1,0 +1,25 @@
+.bg{
+    background-color: whitesmoke !important;
+}
+
+.lft{
+    float: left !important;
+    background-color: red;
+}
+
+
+.rgt{
+    float: right !important;
+}
+
+.btnFile{
+    background-color: orangered !important;
+}
+
+.btnFile{
+    color: white !important;
+}
+
+.txt{
+    margin-top: 25px !important;
+}

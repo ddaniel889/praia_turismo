@@ -31,7 +31,7 @@
                 <h4 class="widget-title">Compañía</h4>
                 <ul class="ps-list--link">
                     <li><a href="about-us.html">Quienes Somos</a></li>
-                    <li><a href="#" routerLink="/mision">Misión y Visión</a></li>
+                    <li><a   (click)="goTo()">Misión y Visión</a></li>
                     <li><a href="#">Donde Estamos</a></li>
                     <li><a href="contact-us.html">Nuestras Redes Sociales</a></li>
                     <li><a href="contact-us.html">Publica con Praia Turismo</a></li>
@@ -39,11 +39,14 @@
             </aside>
           
             <aside class="widget widget_footer">
-                <h4 class="widget-title">Praia Negocios</h4>
+                <h4 class="widget-title">Praia Negocios /Secciones</h4>
                 <ul class="ps-list--link">
-                    <li><a href="#">Ser Freelancer</a></li>
-                    <li><a href="checkout.html">Trabaja con Praia Turismo</a></li>
-                    <li><a href="my-account.html">Sección de Ofertas</a></li>
+                    <li><a (click)="goNot()">Noticias</a></li>
+                    <li><a (click)="goSeg()">Seguro de Viajes</a></li>
+                    <li><a (click)="goPaq()">Paquetes Disney</a></li>
+                    <li><a (click)="goAlq()">Alquiles de vehículos</a></li>
+                    <li><a (click)="goHot()">Hoteles</a></li>
+                    <li><a (click)="goSist()">Aéreo</a></li>
     
                 </ul>
             </aside>

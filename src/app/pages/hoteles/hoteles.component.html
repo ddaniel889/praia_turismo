@@ -1,0 +1,152 @@
+
+<app-header></app-header>
+<div class="ps-page--404">
+    <div class="container bg">
+      
+        <h1 class="hotel">Hoteles</h1>
+        <div>
+            <label for="localidad">Seleccionar</label> 
+            <form [formGroup]="form" class="form1 form-inline">
+                <label for="localidad">Localidad:</label> <br />&nbsp;
+                <input type="text" class="form-control" formControlName="localidad" id="localidad"><br />&nbsp;
+              
+                
+                <button type="submit" class="btn btn-primary" (click)="getSearch()">Buscar</button>
+
+            </form>
+        </div>
+
+        <div class="results" [hidden]="!list">   
+            <h5>Hoteles encontrados</h5> 
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Id</th>
+                    <th>Latitud</th>
+                    <th>Longitud</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hotel Fasano Rio de Janeiro</td>
+                    <td>246233</td>
+                    <td>-22.98703</td>
+                    <td>-43.19715</td>
+                  </tr>
+                  <tr>
+                    <td>Fairmont Rio de Janeiro Copacabana</td>
+                    <td>129841</td>
+                    <td>-22.986053</td>
+                    <td>-43.189343</td>
+                  </tr>
+                  <tr>
+                    <td>Hilton Barra Rio De Janeiro"</td>
+                    <td>505636</td>
+                    <td>-22.971977</td>
+                    <td>-43.374853</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            <h5>Disponibilidad</h5> 
+            <form class="form">
+            <div class="row"> 
+            <div class="col-md-6">   
+                <label for="email" class="mr-sm-2">Destino:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" value="Rio de Janeiro" id="email">
+                <label for="pwd" class="mr-sm-2">Check-in:</label>
+                <input type="date" class="form-control mb-2 mr-sm-2"  id="pwd">
+                <label for="pwd" class="mr-sm-2">Check-out:</label>
+                <input type="date" class="form-control mb-2 mr-sm-2" id="pwd"> <br />
+            </div> 
+            </div> 
+
+            <div class="row"> 
+             <div class="col-md-6">     
+                <label for="total" class="mr-sm-2">Total de búsqueda:</label> 
+                <input type="number" min="0" class="form-control mb-2 mr-sm-2"  id="email">
+                <label for="pwd" class="mr-sm-2">Adultos:</label>
+                <input type="number" class="form-control mb-2 mr-sm-2" min="0" id="pwd">
+               
+                <button type="submit" class="btn btn-primary mb-2" (click)="propertyList()">Buscar</button>
+
+            </div>  
+        </div>    
+              </form>
+        
+        </div>
+
+    <div class="view" [hidden]="!view">
+        <h5>Resultados</h5> 
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Foto</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hostel Fenix Rocinha</td>
+                <td>Estrada da Gavea 306</td>
+                <td><img src="https://exp.cdn-hotels.com/hotels/16000000/15370000/15361900/15361802/b04e22ff_l.jpg" alt=""></td>
+                <td><button type="submit" class="btn btn-primary mb-2" (click)="getDetails()">Ver detalles</button></td>
+              </tr>
+              <tr>
+                <td>Bamboo Rio Hostel</td>
+                <td>Rua Lacerda Coutinho, 45</td>
+                <td><img src="https://exp.cdn-hotels.com/hotels/7000000/6180000/6174100/6174006/e97f8f24_l.jpg" alt=""></td>
+                <td> <button type="submit" class="btn btn-primary mb-2" (click)="getDetails()">Ver detalles</button></td>
+              </tr>
+              <tr>
+                <td>Pura Vida Hostel</td>
+                <td>Rua Saint Roman, 20, Copacabana</td>
+                <td><img src="https://exp.cdn-hotels.com/hotels/10000000/9720000/9716500/9716405/e094d9a8_l.jpg" alt=""></td>
+                <td> <button type="submit" class="btn btn-primary mb-2" (click)="getDetails()">Ver detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+       
+    
+    </div>
+
+    <div class="view" [hidden]="!detail">
+        <h5>Referencia</h5> 
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        <button type="submit" class="btn btn-primary mb-2" (click)="getHotelPhotos()">Ver Fotos</button>
+    
+    </div>
+
+          
+        </div>
+    </div>
+    <hr>
+<!--app-footer></app-footer-->

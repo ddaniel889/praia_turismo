@@ -1,0 +1,1017 @@
+
+<app-header></app-header>
+<div class="ps-page--404">
+    <div class="container bg">
+      
+        <p class="head"> <img class="" src="assets/img/seguros2.png" alt="Card image cap"></p>
+
+
+    
+<form class="planes" [formGroup]="form">
+    <h3>Ver planes disponibles </h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="login"
+                    placeholder="Usúario" required>
+               
+            </div>
+           
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control" id="input_password" formControlName="senha"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+      
+
+        <div class="col-12">
+            <button (click)="GetPlanos()" class="btn btn-success btn-block bttn" >
+                Iniciar sesión
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>    
+
+
+    
+<form class="planes"  [formGroup]="plan">
+    <h3>Detalle de plan </h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="loginPlan"
+                    placeholder="Usúario" required>
+               
+            </div>
+           
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control" id="input_password" formControlName="senhaPlan"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+   <div class="col-12 mb-4">
+      <div class="form-group">
+        <label for="sel1">Seleccionar seguro:</label>
+      <select class="form-control sel1"   formControlName="seguroPlan">
+        <option  value="2076" selected>AFFINITY 110 </option>
+        <option  value="2077">AFFINITY 110 FRIENDS 2</option>
+        <option  value="2078">AFFINITY 110 FRIENDS 5</option>
+        <option  value="2079">AFFINITY 330</option>
+        <option  value="2080">AFFINITY 500</option>
+     </select>
+    </div>
+   </div>
+      
+
+        <div class="col-12">
+            <button (click)="GetPlanosById()" class="btn btn-success btn-block bttn" >
+                Ver plan
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>    
+
+<form class="cotizacion" [formGroup]="getCot">
+    <h3>Obtener cotización </h3>
+  <div class="row">
+   <table class="table table">
+      <tr>
+        <td> 
+            <div class="form-group">
+              <label for="input_email">Usuario</label>
+              <input type="email" class="form-control" id="input_email" formControlName="userCot"
+                placeholder="Usúario" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_password">Contraseña</label>
+            <input type="password" class="form-control" id="input_password" formControlName="senhaCot"
+                placeholder="Senha" required>
+            </div>
+       </td>
+       
+      </tr>
+      <tr>
+        <td>
+            <div class="form-group">
+            <label for="input_email">Código del plan</label>
+            <input type="number" class="form-control" id="input_email" formControlName="cod"
+                placeholder="Id" min="0" required>
+           
+           </div>
+      </td>
+        <td>
+            <div class="form-group">
+                <label for="input_email">Fecha de inicio</label>
+                <input type="date" class="form-control"  formControlName="finicio" required>
+            </div>
+        </td>
+    
+      </tr>
+      <tr>
+        <td> 
+            <div class="form-group">
+            <label for="input_email">Fecha de fin</label>
+            <input type="date" class="form-control"  formControlName="ffin" required>
+           
+           </div>
+       </td>
+        <td> 
+            <div class="form-group">
+            <label for="input_email">Número de pasajeros</label>
+            <input type="number" class="form-control" formControlName="numeroPax"
+                placeholder="número" min="0" required>
+           
+           </div>
+        </td>
+     
+      </tr>
+      <tr>
+        <td>
+            <label for="input_email">Familiar</label>
+            <input type="checkbox" class="form-control box" formControlName="famPax">
+        </td>
+        <td>  
+            <div class="form-group">
+            <label for="sel1">Destino:</label>
+          <select class="form-control"   formControlName="destPax">
+            <option  value="1" selected>Estados Unidos e Canada </option>
+            <option  value="4">Brasil</option>
+            <option  value="5">Europa</option>
+            <option  value="8">Demais paises/option>
+            <option  value="10">America Latina</option>
+         </select>
+        </div>
+       </td>
+      
+      </tr>
+      <tr>
+        <td>
+             <div class="form-group">
+            <label for="input_email">Código de cancelación (opcional)</label>
+            <input type="number" class="form-control" formControlName="codcanelacion"
+                placeholder="número" min="0" required>
+           
+           </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label for="input_email"> Código de actualización de covid (opcional)</label>
+                <input type="number" class="form-control" formControlName="codcovid"
+                    placeholder="número" min="0" required> 
+            </div>
+        </td>
+        
+      </tr>
+     
+  </table>
+      
+
+        <div class="col-12">
+            <button (click)="GetCotacao()" class="btn btn-success btn-block bttn" >
+                Cotacao
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form> 
+
+<form class="cotizacinCat" [formGroup]="getCotCat">
+    <h3>Cotización por categoría </h3>
+  <div class="row">
+   <table class="table table">
+      <tr>
+        <td> 
+            <div class="form-group">
+              <label for="input_email">Usuario</label>
+              <input type="email" class="form-control" id="input_email" formControlName="getlogin"
+                placeholder="Usúario" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_password">Contraseña</label>
+            <input type="password" class="form-control" id="input_password" formControlName="senhaCat"
+                placeholder="Senha" required>
+            </div>
+       </td>
+       
+      </tr>
+      <tr>
+        <td>
+            <div class="form-group">
+                <label for="sel1">Categoria:</label>
+              <select class="form-control"   formControlName="destinoCat">
+                <option  value="n" selected>Nacional </option>
+                <option  value="i">Internacional</option>
+             </select>
+            </div>
+      </td>
+        <td>
+            <div class="form-group">
+                <label for="input_email">Fecha de inicio</label>
+                <input type="date" class="form-control"  formControlName="finicioCat" required>
+            </div>
+        </td>
+    
+      </tr>
+      <tr>
+        <td> 
+            <div class="form-group">
+            <label for="input_email">Fecha de fin</label>
+            <input type="date" class="form-control"  formControlName="ffinCat" required>
+           
+           </div>
+       </td>
+        <td> 
+            <div class="form-group">
+            <label for="input_email">Número de pasajeros</label>
+            <input type="number" class="form-control" formControlName="numeroCat"
+                placeholder="número" min="0" required> 
+           
+           </div>
+        </td>
+     
+      </tr>
+      <tr>
+       
+        <td>  
+            <div class="form-group">
+            <label for="sel1">Destino:</label>
+          <select class="form-control"   formControlName="destCat" required>
+            <option  value="1" selected>Estados Unidos e Canada </option>
+            <option  value="4">Brasil</option>
+            <option  value="5">Europa</option>
+            <option  value="8">Demais paises/option>
+            <option  value="10">America Latina</option>
+         </select>
+        </div>
+       </td>
+
+       <td>
+        <div class="form-group">
+       <label for="input_email">Código de cancelación (opcional)</label>
+       <input type="number" class="form-control" formControlName="codcanelacionCat"
+           placeholder="número" min="0" required>
+      
+      </div>
+   </td>
+      
+      </tr>
+      <tr>
+        <td>
+            <div class="form-group">
+                <label for="input_email"> Código de actualización de covid (opcional)</label>
+                <input type="number" class="form-control" formControlName="codcovidCat"
+                    placeholder="número" min="0" required>
+               </div>
+        </td>
+        
+      </tr>
+     
+  </table>
+      
+
+        <div class="col-12">
+            <button (click)="GetCotacaoCategoria()" class="btn btn-success btn-block bttn" >
+                Ver cotação
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form> 
+
+<form class="planes" [formGroup]="devCam">
+    <h3>Devolver valor de cambio </h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="logCam"
+                    placeholder="Usúario" required>
+               
+            </div>
+           
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control" id="input_password" formControlName="senhaCam"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Fecha</label>
+                <input type="date" class="form-control" id="input_password" formControlName="valorCam" required>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button (click)="GetCambio()" class="btn btn-success btn-block bttn" >
+                Ver
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>    
+
+<form class="cotizaDestino" [formGroup]="cotDest">
+    <h3>Cotización por Destino </h3>
+  <div class="row">
+   <table class="table table">
+      <tr>
+        <td> 
+            <div class="form-group">
+              <label for="input_email">Usuario</label>
+              <input type="text" class="form-control" id="input_email" formControlName="userDest"
+                placeholder="Usúario" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_password">Contraseña</label>
+            <input type="password" class="form-control" id="input_password" formControlName="senhaDest"
+                placeholder="Senha" required>
+            </div>
+       </td>
+       
+      </tr>
+      <tr>
+
+        <td>
+            <div class="form-group">
+                <label for="sel1">Destino:</label>
+                <select class="form-control"   formControlName="dest" required>
+                  <option  value="1" >Estados Unidos e Canadá </option>
+                  <option  value="4">Brasil</option>
+                  <option  value="5" >Europa </option>
+                  <option  value="8">Demais países</option>
+                  <option  value="10" >América Latina </option>
+               </select>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label for="sel1">Categoria:</label>
+              <select class="form-control"   formControlName="catDest" required>
+                <option  value="7" selected>Receptivo </option>
+                <option  value="9">Corporativo Multiviagens</option>
+                <option  value="11" >Estudante </option>
+                <option  value="12">Semestral</option>
+                <option  value="17">Lazer/Negócios</option>
+             </select>
+            </div>
+      </td>
+       
+    
+      </tr>
+      <tr>
+        <td> 
+            <div class="form-group">
+            <label for="input_email">Fecha de fin</label>
+            <input type="date" class="form-control"  formControlName="ffinDest" required>
+           
+           </div>
+       </td>
+        <td> 
+            <div class="form-group">
+                <label for="input_email">Fecha de inicio</label>
+                <input type="date" class="form-control"  formControlName="finicioDest" required>
+            </div>
+
+          
+        </td>
+     
+      </tr>
+      <tr>
+       
+        <td>  
+            <div class="form-group">
+                <label for="input_email">Número de pasajeros</label>
+                <input type="number" class="form-control" formControlName="numeroPaxDest" placeholder="número" min="0" required> 
+            </div>
+       </td>
+
+       <td>
+        <label for="input_email">Familiar</label>
+        <input type="checkbox" class="form-control box" formControlName="familiaCotDest" required>    
+      </td>
+      
+      </tr>
+      <tr>
+        <td>
+        <div class="form-group">
+            <label for="input_email">Código de cancelación (opcional)</label>
+            <input type="number" class="form-control" formControlName="cancelDest"
+                placeholder="número" min="0">
+           
+           </div>
+        </td>   
+        <td>
+            
+            <div class="form-group">
+                <label for="input_email"> Código de actualización de covid (opcional)</label>
+                <input type="number" class="form-control" formControlName="covidDest"
+                    placeholder="número" min="0">
+            </div>
+        </td>
+        
+      </tr>
+     
+  </table>
+        <div class="col-12">
+            <button (click)="getCotacaoDestino()" class="btn btn-success btn-block bttn" >
+                ver cotação
+            </button>
+        </div>
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+    </div>
+</form> 
+
+<form class="nuevoProceso" [formGroup]="newEmision">
+    <h3>Nuevo proceso de emisión </h3>
+  <div class="row">
+   <table class="table table">
+      <tr>
+        <td> 
+            <div class="form-group">
+              <label for="input_email">Usuario</label>
+              <input type="text" class="form-control" id="input_email" formControlName="userEmision"
+                placeholder="Usúario" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_password">Contraseña</label>
+            <input type="password" class="form-control" id="input_password" formControlName="senhaEmision"
+                placeholder="Senha" required>
+            </div>
+       </td>
+       
+      </tr>
+      <tr>
+
+        <td>
+            <div class="form-group">
+                <label for="sel1">Selecciones plan:</label>
+                <select class="form-control sel1"   formControlName="planEmision" required>
+                  <option  value="2076" selected>AFFINITY 110 </option>
+                  <option  value="2077">AFFINITY 110 FRIENDS 2</option>
+                  <option  value="2078">AFFINITY 110 FRIENDS 5</option>
+                  <option  value="2079">AFFINITY 330</option>
+                  <option  value="2080">AFFINITY 500</option>
+               </select>
+            </div>
+        </td>
+        <td>
+            <div class="form-group">
+                <label for="sel1">Número de pasajero:</label>
+                <input type="number" min="0" class="form-control"  formControlName="numPaxE" required>
+            </div>
+      </td>
+       
+    
+      </tr>
+      <tr>
+        <td> 
+            <div class="form-group">
+            <label for="input_email">Fecha de fin</label>
+            <input type="date" class="form-control"  formControlName="ffinEmision" required>
+           
+           </div>
+       </td>
+        <td> 
+            <div class="form-group">
+                <label for="input_email">Fecha de inicio</label>
+                <input type="date" class="form-control"  formControlName="finicioEmision" required>
+            </div>
+
+          
+        </td>
+     
+      </tr>
+      <tr>
+       
+        <td>  
+            <div class="form-group">
+                <label for="input_email">Destino:</label>
+                <input type="text" class="form-control" formControlName="destEmision" placeholder="destino" required> 
+            </div>
+       </td>
+
+       <td>
+        <label for="input_email">Familiar</label>
+        <input type="checkbox" class="form-control box" formControlName="familiaCot">    
+      </td>
+      
+      </tr>
+      <tr>
+        <td>
+        <div class="form-group">
+            <label for="input_email">Código de cancelación (opcional)</label>
+            <input type="number" class="form-control" formControlName="codCancel"
+                placeholder="número" min="0" required>
+           
+           </div>
+        </td>   
+        <td>
+            
+            <div class="form-group">
+                <label for="input_email"> Código de actualización de covid (opcional)</label>
+                <input type="number" class="form-control" formControlName="codCovid"
+                    placeholder="número" min="0" required>
+            </div>
+        </td>
+        
+      </tr>
+     
+  </table>
+        <div class="col-12">
+            <button (click)="newProcesso()" class="btn btn-success btn-block bttn" >
+                Nuevo proceso
+            </button>
+        </div>
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+    </div>
+</form> 
+
+
+<form class="newPax" [formGroup]="newPaxx">
+    <h3>Nuevo registro de Pasajeros </h3>
+  <div class="row">
+   <table class="table table">
+      <tr>
+        <td> 
+            <div class="form-group">
+              <label for="input_email">Usuario</label>
+              <input type="text" class="form-control" id="input_email" formControlName="usuarioPax"
+                placeholder="Usúario" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="senha">Contraseña</label>
+            <input type="password" class="form-control" id="input_password" formControlName="senhaPax"
+                placeholder="Senha" required>
+            </div>
+       </td>
+
+       <td> 
+        <div class="form-group">
+          <label for="input_email">Código de proceso</label>
+          <input type="number" min="0" class="form-control"  formControlName="procesoId"
+            placeholder="Pasajero" required>
+       </div>
+    </td>
+    <td>
+         <div class="form-group">
+        <label for="input_password">Nombre de pasajero</label>
+        <input type="text" class="form-control" id="input_password" formControlName="pax"
+            placeholder="Pasajero" required>
+        </div>
+   </td>
+       
+      </tr>
+      <tr>
+
+        <td> 
+            <div class="form-group">
+              <label for="paxSexo">Sexo</label>
+              <select class="form-control sel1"   formControlName="sexo">
+                <option  value="M" selected>Masculino </option>
+                <option  value="F">Femenino</option>
+             </select>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="fechaNac">Fecha de nacimiento</label>
+            <input type="date" class="form-control"  formControlName="paxFech"
+                placeholder="Fecha de nacimiento">
+            </div>
+       </td>
+
+        <td>
+            <div class="form-group">
+                <label for="idade">Edad:</label>
+                <input type="number" min="0" class="form-control"  formControlName="idade" required>
+            </div>
+        </td>
+        <td>
+            <label for="idade">Pasajero gestante:</label>
+            <select class="form-control sel1"   formControlName="paxGestante" required>
+                <option  value="S" selected>Si </option>
+                <option  value="N">No</option>
+             </select>
+      </td>
+       
+    
+      </tr>
+      <tr>
+         
+        <td> 
+            <div class="form-group">
+              <label for="input_gestacao">Semana gestacao</label>
+              <input type="number" min="0" class="form-control" formControlName="semanaGestacao"
+                placeholder="Semana gestacao" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_doc">Tipo documento de identidad</label>
+            <input type="text" class="form-control"  formControlName="docTipo"
+                placeholder="documento" required>
+            </div>
+       </td>
+        <td> 
+            <div class="form-group">
+            <label for="input_doc">Número de Documento</label>
+            <input type="number" min="0" class="form-control"  formControlName="numDoc" placeholder="Numero" required>
+           
+           </div>
+       </td>
+        <td> 
+            <div class="form-group">
+                <label for="input_endero">Dirección de Pasajero</label>
+                <input type="text" class="form-control"  formControlName="endereco" placeholder="Dirección" required>
+            </div>
+
+          
+        </td>
+     
+      </tr>
+      <tr>
+
+        <td> 
+            <div class="form-group">
+              <label for="input_numero">Número de pasajero</label>
+              <input type="number" min="0" class="form-control"  formControlName="numUPax"
+                placeholder="Usúario" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_cep">CEP</label>
+            <input type="number" min="0" class="form-control"  formControlName="cep"
+                placeholder="CEP" required>
+            </div>
+       </td>
+       
+        <td>  
+            <div class="form-group">
+                <label for="input_barrio">Barrio:</label>
+                <input type="text" class="form-control" formControlName="bairro" placeholder="barrio" required> 
+            </div>
+       </td>
+
+       <td>
+        <label for="input_complemento">Complemento</label>
+        <input type="text" class="form-control box" formControlName="complemento" placeholder="complemento"required >    
+      </td>
+      
+      </tr>
+      <tr>
+
+        <td> 
+            <div class="form-group">
+              <label for="input_cidade">Ciudad</label>
+              <input type="text" class="form-control" id="input_ciudad" formControlName="cidade"
+                placeholder="Cidade" required>
+           </div>
+        </td>
+        <td>
+             <div class="form-group">
+            <label for="input_paxUf">UF</label>
+            <input type="text" class="form-control"  formControlName="uf"
+                placeholder="UF" required>
+            </div>
+       </td> 
+        <td>
+        <div class="form-group">
+            <label for="input_email">Email</label>
+            <input type="email" class="form-control" formControlName="email"
+                placeholder="email" required>
+           
+           </div>
+        </td>   
+        <td>
+            
+            <div class="form-group">
+                <label for="input_telefono"> Teléfono</label>
+                <input type="number" class="form-control" formControlName="telefono"
+                    placeholder="Telefono" min="0" required>
+            </div>
+        </td>
+        
+      </tr>
+      <tr>
+
+        <td>
+            <div class="form-group">
+                <label for="input_celular"> Celular</label>
+                <input type="number" class="form-control" formControlName="celular"
+                    placeholder="Celular" min="0" required>
+            </div>
+
+        </td>
+      </tr>
+     
+  </table>
+        <div class="col-12">
+            <button (click)="newPax()" class="btn btn-success btn-block bttn" >
+                Nuevo proceso de registro
+            </button>
+        </div>
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+    </div>
+</form> 
+
+<form class="planes" [formGroup]="eProceso">
+    <h3>Emitir proceso </h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="logProcess"
+                    placeholder="Usúario" required>
+               
+            </div>
+           
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control"  formControlName="senhaProcess"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_proceso">Id Proceso</label>
+                <input type="number" min="0" class="form-control"  formControlName="procesoId"
+                    placeholder="Id proceso" required>
+            </div>
+        </div>
+
+      
+
+        <div class="col-12">
+            <button (click)="emitirProceso()" class="btn btn-success btn-block bttn" >
+                Emitir proceso
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>    
+
+<form class="vProcess" [formGroup]="vProcess">
+    <h3>Obtener vaucher de proceso </h3>
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="vlogin"
+                    placeholder="Usúario" required>
+               
+            </div>
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control"  formControlName="vSenha"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_proceso">Número de Proceso</label>
+                <input type="number" min="0" class="form-control"  formControlName="vProcesoid"
+                    placeholder="Id proceso" required>
+            </div>
+        </div>
+
+      
+
+        <div class="col-12">
+            <button (click)="getVoucherProcesso()" class="btn btn-success btn-block bttn" >
+                Ver voucher
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>  
+
+<form class="fecha" [formGroup]="vFecha">
+    <h3>Obtener vaucher por fecha </h3>
+    <div class="row">
+        <table class="table table">
+      <tr>  
+       <td> 
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="logFecha"
+                    placeholder="Usúario" required>
+               
+            </div>
+           
+        </div>
+    </td>
+      <td>  
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control"  formControlName="senhaFecha"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+       </td>
+    </tr>
+     <tr>  
+         <td>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_fecha">Fecha de inicio</label>
+                <input type="date"  class="form-control"  formControlName="iniFecha"
+                    >
+            </div>
+        </div>
+    </td>
+    <td>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_proceso">Fecha de fin</label>
+                <input type="date"  class="form-control"  formControlName="finFecha"
+                    >
+            </div>
+        </div>
+    </td>
+    </tr>       
+    </table>
+    <div class="col-12">
+        <button (click)="getVoucherFecha()" class="btn btn-success btn-block bttn" >
+            Ver
+        </button>
+    </div>
+    <div id="container_or" class="col-12 my-2">
+        <hr />
+        <span class="ion-text-center ion-no-margin"></span>
+    </div>
+    </div>
+</form>  
+
+<form class="planes" [formGroup]="vDetalle">
+    <h3>Ver detalle de vaucher </h3>
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="logDetalle"
+                    placeholder="Usúario" required>
+               
+            </div>
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control"  formControlName="senhaDetalle"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_proceso">Número de Proceso</label>
+                <input type="number" min="0" class="form-control"  formControlName="processNum"
+                    placeholder="Id proceso" required>
+            </div>
+        </div>
+        <div class="col-12 mb-4">
+            <label for="idade">Idioma:</label>
+            <select class="form-control sel1"   formControlName="idiomaNum" required>
+                <option  value="1" selected>Português </option>
+                <option  value="2">Inglês </option>
+             </select>
+        </div>
+       
+        <div class="col-12">
+            <button (click)="getDetail()" class="btn btn-success btn-block bttn" >
+                Ver voucher
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>  
+
+<form class="vaucher" [formGroup]="vCancel">
+    <h3>Cancelar vaucher </h3>
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_email">Usuario</label>
+                <input type="text" class="form-control" id="input_email" formControlName="logCancel"
+                    placeholder="Usúario" required>
+               
+            </div>
+        </div>
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_password">Contraseña</label>
+                <input type="password" class="form-control"  formControlName="senhaCancel"
+                    placeholder="Senha" required>
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <div class="form-group">
+                <label for="input_numeroo">Número de vaucher</label>
+                <input type="number" min="0" class="form-control"  formControlName="numCancel"
+                    placeholder="Número do voucher" required>
+            </div>
+        </div>
+       
+        <div class="col-12">
+            <button (click)="cancelVaucher()" class="btn btn-success btn-block bttn" >
+                Ver voucher
+            </button>
+        </div>
+
+        <div id="container_or" class="col-12 my-2">
+            <hr />
+            <span class="ion-text-center ion-no-margin"></span>
+        </div>
+
+    </div>
+</form>  
+
+      
+    </div>
+    </div>
+    <hr>
+<!--app-footer></app-footer-->
