@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Assist365Service } from 'src/app/services/assist365.service';
 import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
 
 @Component({
@@ -10,6 +11,7 @@ import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@ang
   styleUrls: ['./seguro.component.css']
 })
 export class SeguroComponent implements OnInit {
+  secure:boolean = false;
   form: FormGroup;
   plan: FormGroup;
   getCot:FormGroup;
@@ -26,9 +28,15 @@ export class SeguroComponent implements OnInit {
 
   public login: string;
   public detalle: string;
-  constructor(private httpClient: HttpClient, public fb: FormBuilder) { }
+  constructor(private httpClient: HttpClient, public fb: FormBuilder, private assitsService:Assist365Service) { }
 
   ngOnInit(): void {
+
+    this.assitsService.getAssits('countries')
+    .subscribe( data => {
+     console.log(data);
+    }
+    );
     this.form = this.fb.group({
       login: new FormControl(),
       senha: new FormControl()

@@ -1,6 +1,9 @@
 .bg{
     background-color: whitesmoke !important;
 }
+.pub{
+    color: blue !important;
+}
 
 .lft{
     float: left !important;
@@ -11,9 +14,12 @@
 .rgt{
     float: right !important;
 }
+.fwidth{
+    width: 700px !important;
+}
 
 .btnFile{
-    background-color: orangered !important;
+    background-color: rgb(4, 0, 255) !important;
 }
 
 .btnFile{

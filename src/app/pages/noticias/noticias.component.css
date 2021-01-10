@@ -10,3 +10,13 @@
 .title{
     color: #1589FF;
 }
+.topTitle{
+    margin-top: 30px !important;
+}
+.cardWidth{
+    margin-top: 30px !important;
+}
+
+.rounde{
+    border-radius: 10px;
+}

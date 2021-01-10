@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators,FormBuilder } from '@angular/forms';
+import { NoticiasService  } from 'src/app/services/noticias.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,38 +10,57 @@ import { FormControl, FormGroup, Validators,FormBuilder } from '@angular/forms';
   styleUrls: ['./add-news.component.css']
 })
 export class AddNewsComponent implements OnInit {
-  icono: any;
+  image: string;
+  image2: any;
   form: FormGroup;
+  files:string  []  =  [];
+  name:string;
 
-  constructor( private fb: FormBuilder) { }
+  constructor( private fb: FormBuilder,private noticia:NoticiasService,   private router: Router) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
       titulo: [''],
-      texto: ['']
+      descripcion: [''],
+      file: ['']
   });
   }
 
-  public onFileChoosen(file: any) {
-    this.icono = file; 
+  public onFileChoosen(event) {
+    for  (var i =  0; i < event.target.files.length; i++)  {  
+      this.files.push(event.target.files[i]);
+  }
+    this.image2 = this.files[0];
+    this.name = this.image2.name;
 }
 
 
 save(){
-  console.log(this.form.value)
+  const fd = new FormData();
+  for  (var i =  0; i <  this.files.length; i++)  {  
+    fd.append("file[]",  this.files[i]);    
+   } 
 
-  /*this.client.post('comercio', object,[
-    { name:'imagen', file: this.icono },
-  ]).subscribe((data)=> {
-    console.log(data);
-    this.router.navigateByUrl('/tiendas/tienda');
-      },
-      error => {
-        console.log(error);
-      }
-  );*/
+   this.noticia.upfile(fd).subscribe((response) => {
+  console.log(response);
 }
+);
+  
+  const object: any = {
+    titulo : this.form.value.titulo,
+    imagen : this.name,
+    descripcion:  this.form.value.descripcion
+  }
+  this.noticia.addNews(object).subscribe((response) => {
+    console.log(response);
+    this.router.navigate(['/noticias']);
+  },
+  error => {
+    console.log(error);
+  }
+  );
 
+}
 
 
 }

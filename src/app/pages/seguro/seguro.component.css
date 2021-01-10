@@ -6,6 +6,18 @@
     height: 25px !important;
 }
 
+.planes{
+    width:650px !important;
+    margin-left: 250px;
+    /*border: 1px solid black;*/
+    /*border-radius: 15px;*/
+}
+
+.plan{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
 
 .bttn{
     background-color: orange !important;

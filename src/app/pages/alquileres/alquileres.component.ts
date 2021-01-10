@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import $ from 'jquery';
+
 
 @Component({
   selector: 'app-alquileres',
@@ -8,6 +10,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class AlquileresComponent implements OnInit {
 
+  
+  idd:any;
   private url = 'https://www.agentcars.com/subsite/es-es/site/index';
   public urlSafe: SafeResourceUrl;
 
@@ -17,7 +21,11 @@ export class AlquileresComponent implements OnInit {
     this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
   }
 
+  
 
+  closeModal() {
+    $("#exampleModal").modal('toggle');
+  }
 }
 //import { Plugins } from 'src/app/services/funciones';
 
@@ -26,3 +34,4 @@ export class AlquileresComponent implements OnInit {
 //}
 
 //   this.plugins();
+

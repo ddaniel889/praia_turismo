@@ -17,17 +17,17 @@
       
         <h1 class="title">Praia Notícias</h1>
         <hr>  
-      
-        <hr>
         <div class="card"> 
 
 
         </div>  
-        <div class="card mb-4 shadow-sm">
-            <h5 class="card-title">Card title</h5>
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        <div class="card mb-4 shadow-sm rounde cardWidth" *ngFor="let policy of policies">
+            <h5 class="card-title topTitle">{{ policy.titulo }}</h5>
+            <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg-->
+   
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <img  class="card-img-top" width="" height="" src="https://prt21.000webhostapp.com/news/images/{{ policy.imagen }}" alt="">
+              <p class="card-text text-justify"> {{ policy.descripcion }}</p> 
               <div class="d-flex justify-content-between align-items-center">
                 <!--div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -37,6 +37,10 @@
               </div>
             </div>
           </div>
+
+<div>
+
+
     </div>
     </div>
     <hr>

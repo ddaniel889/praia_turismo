@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { map } from 'rxjs/operators';
+
+import {map, startWith} from 'rxjs/operators';
 import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
 
 @Component({
@@ -10,6 +11,9 @@ import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@ang
   styleUrls: ['./hoteles.component.css']
 })
 export class HotelesComponent implements OnInit {
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
+  filteredOptions: Observable<string[]>;
 
   public form: FormGroup;
   private REST_API_SERVER = "http://localhost:3000/products";
@@ -26,6 +30,18 @@ export class HotelesComponent implements OnInit {
     this.form = this.fb.group({
       localidad: ['']
   });
+  this.filteredOptions = this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
+  }
+
+  
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
   

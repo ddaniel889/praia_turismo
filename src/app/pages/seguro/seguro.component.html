@@ -1,12 +1,12 @@
 
-<app-header></app-header>
+<!--app-header></app-header-->
 <div class="ps-page--404">
     <div class="container bg">
       
         <p class="head"> <img class="" src="assets/img/seguros2.png" alt="Card image cap"></p>
 
 
-    
+<div class="plan">   
 <form class="planes" [formGroup]="form">
     <h3>Ver planes disponibles </h3>
     <div class="row">
@@ -31,7 +31,7 @@
 
         <div class="col-12">
             <button (click)="GetPlanos()" class="btn btn-success btn-block bttn" >
-                Iniciar sesión
+                Consultar
             </button>
         </div>
 
@@ -42,10 +42,10 @@
 
     </div>
 </form>    
-
+</div>  
 
     
-<form class="planes"  [formGroup]="plan">
+<form class="planes"  [formGroup]="plan" *ngIf="secure">
     <h3>Detalle de plan </h3>
     <div class="row">
         <div class="col-12">
@@ -93,7 +93,7 @@
     </div>
 </form>    
 
-<form class="cotizacion" [formGroup]="getCot">
+<form class="cotizacion" [formGroup]="getCot" *ngIf="secure">
     <h3>Obtener cotización </h3>
   <div class="row">
    <table class="table table">
@@ -204,7 +204,7 @@
     </div>
 </form> 
 
-<form class="cotizacinCat" [formGroup]="getCotCat">
+<form class="cotizacinCat" [formGroup]="getCotCat" *ngIf="secure">
     <h3>Cotización por categoría </h3>
   <div class="row">
    <table class="table table">
@@ -314,7 +314,7 @@
     </div>
 </form> 
 
-<form class="planes" [formGroup]="devCam">
+<form class="planes" [formGroup]="devCam" *ngIf="secure">
     <h3>Devolver valor de cambio </h3>
     <div class="row">
         <div class="col-12">
@@ -355,7 +355,7 @@
     </div>
 </form>    
 
-<form class="cotizaDestino" [formGroup]="cotDest">
+<form class="cotizaDestino" [formGroup]="cotDest" *ngIf="secure">
     <h3>Cotización por Destino </h3>
   <div class="row">
    <table class="table table">
@@ -471,7 +471,7 @@
     </div>
 </form> 
 
-<form class="nuevoProceso" [formGroup]="newEmision">
+<form class="nuevoProceso" [formGroup]="newEmision" *ngIf="secure">
     <h3>Nuevo proceso de emisión </h3>
   <div class="row">
    <table class="table table">
@@ -582,7 +582,7 @@
 </form> 
 
 
-<form class="newPax" [formGroup]="newPaxx">
+<form class="newPax" [formGroup]="newPaxx" *ngIf="secure">
     <h3>Nuevo registro de Pasajeros </h3>
   <div class="row">
    <table class="table table">
@@ -775,7 +775,7 @@
     </div>
 </form> 
 
-<form class="planes" [formGroup]="eProceso">
+<form class="planes" [formGroup]="eProceso" *ngIf="secure">
     <h3>Emitir proceso </h3>
     <div class="row">
         <div class="col-12">
@@ -819,7 +819,7 @@
     </div>
 </form>    
 
-<form class="vProcess" [formGroup]="vProcess">
+<form class="vProcess" [formGroup]="vProcess" *ngIf="secure">
     <h3>Obtener vaucher de proceso </h3>
     <div class="row">
         <div class="col-12 mb-4">
@@ -862,7 +862,7 @@
     </div>
 </form>  
 
-<form class="fecha" [formGroup]="vFecha">
+<form class="fecha" [formGroup]="vFecha" *ngIf="secure">
     <h3>Obtener vaucher por fecha </h3>
     <div class="row">
         <table class="table table">
@@ -921,7 +921,7 @@
     </div>
 </form>  
 
-<form class="planes" [formGroup]="vDetalle">
+<form class="planes" [formGroup]="vDetalle" *ngIf="secure">
     <h3>Ver detalle de vaucher </h3>
     <div class="row">
         <div class="col-12 mb-4">
@@ -969,7 +969,7 @@
     </div>
 </form>  
 
-<form class="vaucher" [formGroup]="vCancel">
+<form class="vaucher" [formGroup]="vCancel" *ngIf="secure">
     <h3>Cancelar vaucher </h3>
     <div class="row">
         <div class="col-12 mb-4">
