@@ -9,7 +9,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class Assist365Service {
 
-  assist = environment.assitsUrl;
+  assist = "http://preapp.assist-365.com/api/";
 
   constructor(private http: HttpClient) { }
 

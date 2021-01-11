@@ -8,7 +8,7 @@ import { Observable } from  'rxjs';
   providedIn: 'root'
 })
 export class NoticiasService {
-  baseUrl = environment.baseUrl
+  baseUrl = "https://prt21.000webhostapp.com/news";
 
   constructor(private http: HttpClient) {
 
