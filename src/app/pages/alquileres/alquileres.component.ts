@@ -27,11 +27,5 @@ export class AlquileresComponent implements OnInit {
     $("#exampleModal").modal('toggle');
   }
 }
-//import { Plugins } from 'src/app/services/funciones';
 
-//private plugins = (): void => {
-  //Plugins.stickyHeader();
-//}
-
-//   this.plugins();
 
