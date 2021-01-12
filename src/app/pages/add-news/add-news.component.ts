@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-news.component.css']
 })
 export class AddNewsComponent implements OnInit {
+  
+  currentDate: Date;
   image: string;
   image2: any;
   form: FormGroup;
@@ -24,6 +26,8 @@ export class AddNewsComponent implements OnInit {
       descripcion: [''],
       file: ['']
   });
+  this.currentDate = new Date();
+  console.log(this.currentDate);
   }
 
   public onFileChoosen(event) {
@@ -43,14 +47,17 @@ save(){
 
    this.noticia.upfile(fd).subscribe((response) => {
   console.log(response);
+  this.router.navigate(['/noticias']);
 }
 );
   
   const object: any = {
     titulo : this.form.value.titulo,
     imagen : this.name,
-    descripcion:  this.form.value.descripcion
+    descripcion:  this.form.value.descripcion,
+    fecha: this.currentDate.toString()
   }
+  console.log(object);
   this.noticia.addNews(object).subscribe((response) => {
     console.log(response);
     this.router.navigate(['/noticias']);
