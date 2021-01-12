@@ -17,6 +17,36 @@
     border: 1px solid black;
     border-radius: 15px;
 }
+.assitsProd{
+    color: #00698f;
+    margin-top: 20px;
+}
+.assitsUsd{
+    color: #93d3eb;
+}
+.assitsPrice{
+    color: red;
+}
+.selectProd{
+    color: white;
+}
+
+.prod{
+    margin-top: 20px;
+    background-color: red !important;
+    margin-bottom: 20px;
+}
+.img365{
+    margin-top: 20px;
+    margin-bottom: 0;
+    
+}   
+
+.Assits365{
+    margin-top: 30px !important;
+    border: 1px solid black;
+    border-radius: 15px;
+}
 
 
 .bttn{

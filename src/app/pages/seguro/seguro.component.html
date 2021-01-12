@@ -8,6 +8,7 @@
 
 <div class="plan">   
 <form class="planes" [formGroup]="form">
+    <img class="img365" src="assets/img/affinity.png" alt="Card image cap">
     <h3>Ver planes disponibles </h3>
     <div class="row">
         <div class="col-12">
@@ -44,7 +45,404 @@
 </form>    
 </div>  
 
+
+<div class="Assits365">   
+     
+    <form class="planes" [formGroup]="assits">
+        <img class="img365" src="assets/img/assits365.png" alt="Card image cap">
+        <h3 class="assitsProd">Ver Productos de Coberturas</h3>
+      <div class="row">
+       <table class="table table">
+          <tr>
+            <td> 
+                <div class="form-group">
+                 
+                    <label for="selRegion">Región:</label>
+                    <select class="form-control"   formControlName="assistRegion">
+                      <option  value="16" selected>Estados Unidos e Canada </option>
+                      <option  value="9">Asia</option>
+                      <option  value="10">Europa</option>
+                      <option  value="17">Demais paises</option>
+                      <option  value="5">Sudamerica y Caribe</option>
+                      <option  value="2">Oceanía</option>
+                      <option  value="9">Africa</option>
+                   </select>
+               </div>
+            </td>
+            <td>
+                 <div class="form-group">
+                    <label for="selPais">País:</label>
+                    <select class="form-control"   formControlName="assistPais">
+                      <option  value="1" selected>Estados Unidos </option>
+                      <option  value="4">Brasil</option>
+                      <option  value="5">España</option>
+                      <option  value="8">Venezuela</option>
+                      <option  value="10">Colombia</option>
+                   </select>
+                </div>
+           </td>
+           
+          </tr>
+          <tr>
+            <td>
+                <div class="form-group">
+                <label for="day">Días para cotizar</label>
+                <input type="number" class="form-control" id="input_email" formControlName="days"
+                    placeholder="Días" min="0" required>
+               
+               </div>
+          </td>
+            <td>
+                <div class="form-group">
+                    <label for="key">Clave de entidad</label>
+                    <input type="number" class="form-control" id="input_email" formControlName="entiKey"
+                        placeholder="Clave" min="0" required>
+                </div>
+            </td>
+        
+          </tr>
+          <tr>
+            <td> 
+                <div class="form-group">
+                <label for="date">Año de la fecha de regreso</label>
+                <input type="date" class="form-control"  formControlName="returnDate" required>
+               
+               </div>
+           </td>
+            <td> 
+                <div class="form-group">
+                <label for="totalPax">Total de pasajeros</label>
+                <input type="number" class="form-control" formControlName="totalPax"
+                    placeholder="Total" min="0" required>
+               
+               </div>
+            </td>
+         
+          </tr>
+          <tr>
+            <td>
+                <div class="form-group">
+                    <label for="totalPax">Edad de pasajeros</label>
+                    <input type="number" class="form-control" formControlName="edadPax"
+                        placeholder="Edad" min="0" required>
+                   
+                   </div>
+            </td>
+            <td>  
+                <div class="form-group">
+                <label for="sel1">Lista de productos según cobertura:</label>
+              <select class="form-control"   formControlName="listProduct">
+                <option  value="2" selected>Covid </option>
+                <option  value="1">No covid</option>
+                
+             </select>
+            </div>
+           </td>
+          
+          </tr>   
+      </table>
+          
     
+            <div class="col-12">
+                <button (click)="GetCotacao()" class="btn btn-success btn-block bttn" >
+                    Ver productos
+                </button>
+             
+            </div>
+    
+            <div id="container_or" class="col-12 my-2">
+                <hr />
+                <span class="ion-text-center ion-no-margin"></span>
+            </div>
+    
+        </div>
+    </form> 
+
+    </div>  
+
+
+
+    <div class="Assits365">   
+     
+        <div class="planes">
+            <h3 class="assitsProd">World cover</h3>
+            <h4 class="assitsUsd">USD 20</h4>
+            <h5 class="assitsPrice">VES 5.045.925</h5>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Asistencia médica en caso de accidente</th>
+                    <th>USD 50.000</th>
+                 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Asistencia médica en caso de enfermedad</td>
+                    <td>USD 50.000</td>
+                
+                  </tr>
+                  <tr>
+                    <td>Medicamentos por hospitalización</td>
+                    <td>Incluido</td>
+                
+                  </tr>
+                  <tr>
+                    <td>Medicamentos Ambulatorios</td>
+                    <td>USD 200</td>
+              
+                  </tr>
+                </tbody>
+              </table>
+              <div class="col-12">
+                <a  (click)="Select()" class="btn btn-success btn-block active prod" role="button" aria-pressed="true">Seleccionar</a>
+            </div>
+     
+        </div> 
+    
+        </div>    
+    
+
+        <div class="Assits365">   
+     
+            <form class="planes" [formGroup]="emitP">
+                <img class="img365" src="assets/img/assits365.png" alt="Card image cap">
+                <h3 class="assitsProd">Emitir Póliza de Seguros</h3>
+              <div class="row">
+               <table class="table table">
+                  <tr>
+                    <td> 
+                        <div class="form-group">
+                         
+                            <label for="day">Clave de entidad</label>
+                            <input type="number" class="form-control" id="input_email" formControlName="days"
+                                placeholder="key" min="0" required>
+                       </div>
+                    </td>
+                    <td>
+                         <div class="form-group">
+                            <label for="day">Clave de vendedor</label>
+                            <input type="number" class="form-control" id="input_email" formControlName="days"
+                                placeholder="key" min="0" required>
+                        </div>
+                   </td>
+
+                   <td>
+                    <div class="form-group">
+                       <label for="selPais">Producto:</label>
+                       <select class="form-control"   formControlName="assistPais">
+                         <option  value="1" selected>World cover </option>
+                         <option  value="2">Safe travel</option>
+                         <option  value="3">Premiun</option>
+                       
+                      </select>
+                   </div>
+              </td>
+                   
+                  </tr>
+                  <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="selPais">País:</label>
+                            <select class="form-control"   formControlName="assistPais">
+                              <option  value="1" selected>Estados Unidos </option>
+                              <option  value="4">Brasil</option>
+                              <option  value="5">España</option>
+                              <option  value="8">Venezuela</option>
+                              <option  value="10">Colombia</option>
+                           </select>
+                       
+                       </div>
+                  </td>
+                    <td>
+                        <div class="form-group">
+                            <label for="selRegion">Región:</label>
+                            <select class="form-control"   formControlName="assistRegion">
+                              <option  value="16" selected>Estados Unidos e Canada </option>
+                              <option  value="9">Asia</option>
+                              <option  value="10">Europa</option>
+                              <option  value="17">Demais paises</option>
+                              <option  value="5">Sudamerica y Caribe</option>
+                              <option  value="2">Oceanía</option>
+                              <option  value="9">Africa</option>
+                           </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <label for="key">Fecha de salida</label>
+                            <input type="date" class="form-control" id="input_email" formControlName="entiKey"
+                                 min="0" required>
+                        </div>
+                    </td>
+                
+                  </tr>
+                  <tr>
+                    <td> 
+                        <div class="form-group">
+                            <label for="key">Fecha de llegada</label>
+                            <input type="date" class="form-control" id="input_email" formControlName="entiKey"
+                                  required>
+                       
+                       </div>
+                   </td>
+                    <td> 
+                        <div class="form-group">
+                        <label for="totalPax">Emitir con asignación</label>
+                        <input type="text" class="form-control" formControlName="totalPax"
+                              required>
+                       
+                       </div>
+                    </td>
+
+                    <td> 
+                        <div class="form-group">
+                        <label for="totalPax">Nombre del beneficiario</label>
+                        <input type="text" class="form-control" formControlName="totalPax"
+                            placeholder="nombre"  required>
+                       
+                       </div>
+                    </td>
+                 
+                  </tr>
+                  <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="totalPax">Apellido del beneficiario</label>
+                            <input type="number" class="form-control" formControlName="edadPax"
+                                placeholder="Apellido"  required>
+                           
+                           </div>
+                    </td>
+                    <td>  
+                        <div class="form-group">
+                        <label for="sel1">Día de cumpleaños:</label>
+                        <input type="number" placeholder="Día" min="0" class="form-control" formControlName="edadPax"
+                          >
+                    </div>
+                   </td>
+
+                   <td>  
+                    <div class="form-group">
+                    <label for="sel1">Mes de cumpleaños:</label>
+                    <input type="number" placeholder="mes"  min="0" class="form-control" formControlName="edadPax"
+                      >
+                </div>
+               </td>
+                  
+                  </tr>   
+                  <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="totalPax">Año de cumpleaños</label>
+                            <input type="number" class="form-control" formControlName="edadPax"
+                                placeholder="año" min="0" required>
+                           
+                           </div>
+                    </td>
+                    <td>  
+                        <div class="form-group">
+                        <label for="sel1">Tipo de Documento:</label>
+                        <select class="form-control"   formControlName="listProduct">
+                            <option  value="DNI" selected>DNI </option>
+                            <option  value="Pasaporte">Pasaporte</option>
+                            
+                         </select>
+                    </div>
+                   </td>
+
+                   <td>  
+                    <div class="form-group">
+                    <label for="sel1">Número de dni o pasaporte:</label>
+                    <input type="number" class="form-control" formControlName="edadPax"
+                    placeholder="número" min="0" required>
+                 
+                </div>
+               </td>
+                  
+                  </tr>   
+                  <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="totalPax">Teléfono de contacto:</label>
+                            <input type="number" class="form-control" formControlName="edadPax"
+                                placeholder="número" min="0" required>
+                           
+                           </div>
+                    </td>
+                    <td>  
+                        <div class="form-group">
+                        <label for="sel1">Nacionalidad:</label>
+                        <select class="form-control"   formControlName="assistPais">
+                            <option  value="1" selected>Estados Unidos </option>
+                            <option  value="4">Brasil</option>
+                            <option  value="5">España</option>
+                            <option  value="8">Venezuela</option>
+                            <option  value="10">Colombia</option>
+                         </select>
+                    </div>
+                   </td>
+
+                   <td>  
+                    <div class="form-group">
+                    <label for="sel1">País de residencia:</label>
+                    <select class="form-control"   formControlName="assistPais">
+                        <option  value="1" selected>Estados Unidos </option>
+                        <option  value="4">Brasil</option>
+                        <option  value="5">España</option>
+                        <option  value="8">Venezuela</option>
+                        <option  value="10">Colombia</option>
+                     </select>
+                </div>
+               </td>
+                  
+                  </tr>   
+                  <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="totalPax">Teléfono principal:</label>
+                            <input type="number" class="form-control" formControlName="edadPax"
+                                placeholder="número" min="0" required>
+                           
+                           </div>
+                    </td>
+                    <td>  
+                        <div class="form-group">
+                        <label for="sel1">Email del beneficiario:</label>
+                        <input type="email" class="form-control" formControlName="edadPax"
+                        placeholder="text"  required>
+                    </div>
+                   </td>
+
+                   <td>  
+                    <div class="form-group">
+                    <label for="sel1">Contacto de emergencia:</label>
+                    <input type="text" class="form-control" formControlName="edadPax"
+                    placeholder="contacto"  required>
+                </div>
+               </td>
+                  
+                  </tr>   
+              </table>
+                  
+            
+                    <div class="col-12">
+                        <a  (click)="Emit()" class="btn btn-success btn-block active prod" role="button" aria-pressed="true">Emitir póliza</a>
+                     
+                    </div>
+            
+                    <div id="container_or" class="col-12 my-2">
+                        <hr />
+                        <span class="ion-text-center ion-no-margin"></span>
+                    </div>
+            
+                </div>
+            </form> 
+        
+            </div>  
+            
+            
 <form class="planes"  [formGroup]="plan" *ngIf="secure">
     <h3>Detalle de plan </h3>
     <div class="row">

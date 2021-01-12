@@ -12,6 +12,8 @@ import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@ang
 })
 export class SeguroComponent implements OnInit {
   secure:boolean = false;
+  emitP:FormGroup
+  assits: FormGroup;
   form: FormGroup;
   plan: FormGroup;
   getCot:FormGroup;
@@ -175,6 +177,17 @@ this.newPaxx = this.fb.group({
   }
 
 
+  Select(): void {
+    //http://www.affinityassistencia.com.br/ws/exemplos/getPlanos.asp
+    console.log('hello');
+  
+  }
+
+  Emit(): void {
+    //http://www.affinityassistencia.com.br/ws/exemplos/getPlanos.asp
+    console.log('hello');
+  
+  }
   
   GetPlanos(): void {
     //http://www.affinityassistencia.com.br/ws/exemplos/getPlanos.asp
